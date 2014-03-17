@@ -66,3 +66,17 @@ Metrics Resource Examples::
     ## Get NPS Metrics by Trend
     client.metrics.get(trend=456)
 
+
+Important TODO's
+----------------
+
+1. Write Unit Tests using a test Delighted account.
+2. Rework error throwing to be a bit more useful (see DelightedAPIError)
+3. Make passing person properties more intuitive.
+
+
+Acknowledgements
+----------------
+
+- The Delighted Team for creating a wonderful service and kick ass API
+- Team Testive for supporting the creation and open source of the wrapper

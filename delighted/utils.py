@@ -10,6 +10,9 @@ class DelightedAPIError(Exception):
         1) Passing in a 'message' kwarg with the desired error message.
         2) Passing in a 'status_code' kwarg which will result in the corresponding
            error message found in the STATUS_CODE_MESSAGES attribute.
+
+       TODO:
+        Make the 422 errors more useful by bubbling up the offending parameter.
     """
     STATUS_CODE_MESSAGES = {
         401: 'That API key is invalid.',
@@ -66,6 +69,11 @@ class Resource(object):
 
     def post(self, **kwargs):
         """Send a POST request to the given endpoint with the given kwargs.
+
+           TODO:
+            Do some processing here to deal with the properties parameter on
+            people. (Idea: allow for the passing of a single properties dict and
+            then explode it here into the {'properties[key]': 'value'} format.)
         """
         return self._make_request('post', kwargs)
 
