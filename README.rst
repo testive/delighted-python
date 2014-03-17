@@ -9,6 +9,7 @@ Getting started is easy!
 -----------------------
 
 Install from pip::
+
     sudo pip install DelightedPython
 
 Basic Usage::
