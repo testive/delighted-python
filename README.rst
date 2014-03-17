@@ -79,4 +79,5 @@ Acknowledgements
 ----------------
 
 - The `Delighted <https://delightedapp.com/>`_ Team for creating a wonderful service and kick ass API
-- Team `Testive <http://www.testive.com/>`_ for supporting the creation and open source of the wrapper
+- Team `Testive <http://www.testive.com/>`_
+ for supporting the creation and open source of the wrapper
