@@ -5,9 +5,10 @@ Delighted Python
 Python wrapper for the `Delighted API <https://delightedapp.com/docs/api>`_. Get
 your pythonic NPS on!
 
-Getting started is easy::
+Getting started is easy!
+-----------------------
 
-    ## Install from pip
+Install from pip::
     sudo pip install DelightedPython
 
 Basic Usage::
@@ -20,7 +21,9 @@ Basic Usage::
     ## Get a list of all survey responses
     responses = client.survey_response.get()
 
-## Person Resource
+Person Resource
+---------------
+
 See `the docs <https://delightedapp.com/docs/api>`_ for valid parameters and usage.
 
 People Resource Examples::
@@ -35,7 +38,9 @@ People Resource Examples::
     ## Delete upcoming survey request for the given person
     client.person.delete('getmynps@testing.com')
 
-## Survey Response Resource
+Survey Response Resource
+------------------------
+
 See `the docs <https://delightedapp.com/docs/api>`_ for valid parameters and usage.
 
 Survey Response Resource Examples::
@@ -47,7 +52,9 @@ Survey Response Resource Examples::
     client.survey_response.get()
 
 
-## Metrics Resource
+Metrics Resource
+----------------
+
 See `the docs <https://delightedapp.com/docs/api>`_ for valid parameters and usage.
 
 Metrics Resource Examples::
