@@ -77,6 +77,36 @@ class Resource(object):
         """
         return self._make_request('post', kwargs)
 
+    def _parse_request_data(self, data):
+        """Cleans the data a user wishes to send with a request to conform with
+           Delighted's expected format.
+
+           Specifically Delighted's API expects 'properties' in the following form:
+            'properties[key]' = 'value'
+
+           It is much more intuitive to pass the following:
+            properties = {key: value}
+
+           This method takes the intuitive properties dict and transforms it into
+           the format expected by Delighted, for increased readability and lack
+           of headaches :)
+        """
+        cleaned_data = data.copy()
+
+        try:
+            properties = cleaned_data.pop('properties')
+            assert type(properties) == dict
+        except KeyError:
+            return cleaned_data
+        except AssertionError:
+            return cleaned_data
+
+        for key, value in properties.items():
+            cleaned_key = 'properties[%s]' %  key
+            cleaned_data[cleaned_key] = value
+
+        return cleaned_data
+
     def _make_request(self, method, data={}, url=None):
         """The core method for making requests.
 
@@ -101,10 +131,12 @@ class Resource(object):
             raise DelightedAPIError(message='Invalid request method.')
 
         request_data = dict(auth=(self.api_key, ''))
+        parsed_data = self._parse_request_data(data)
+
         if method == 'get':
-            request_data['params'] = data
+            request_data['params'] = parsed_data
         else:
-            request_data['data'] = data
+            request_data['data'] = parsed_data
 
         response = request_method(url, **request_data)
 

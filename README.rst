@@ -34,7 +34,7 @@ People Resource Examples::
 
     ## Update a person record
     client.person.update('getmynps@testing.com',
-                         **{'properties[location]': 'Boston'})
+                         properties={'location': 'Boston'})
 
     ## Delete upcoming survey request for the given person
     client.person.delete('getmynps@testing.com')
@@ -72,12 +72,10 @@ Important TODO's
 
 1. Write Unit Tests using a test Delighted account.
 2. Rework error throwing to be a bit more useful (see DelightedAPIError)
-3. Make passing person properties more intuitive.
 
 
 Acknowledgements
 ----------------
 
 - The `Delighted <https://delightedapp.com/>`_ Team for creating a wonderful service and kick ass API
-- Team `Testive <http://www.testive.com/>`_
- for supporting the creation and open source of the wrapper
+- Team `Testive <http://www.testive.com/>`_ for supporting the creation and open source of the wrapper
