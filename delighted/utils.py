@@ -26,6 +26,7 @@ class DelightedAPIError(Exception):
         status_code = kwargs.get('status_code', None)
         if message:
             return super(DelightedAPIError, self).__init__(message)
+
         status_message = self.STATUS_CODE_MESSAGES.get(status_code, '')
         return super(DelightedAPIError, self).__init__(status_message)
 

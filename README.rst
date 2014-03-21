@@ -67,11 +67,20 @@ Metrics Resource Examples::
     client.metrics.get(trend=456)
 
 
+Unit Tests
+----------
+
+To run unit test first add your test api key to delighted/test/test_delighted.py.
+
+Then run the following::
+
+    python -m delighted.test.test_delighted
+
+
 Important TODO's
 ----------------
 
-1. Write Unit Tests using a test Delighted account.
-2. Rework error throwing to be a bit more useful (see DelightedAPIError)
+1. Rework error throwing to be a bit more useful (see DelightedAPIError)
 
 
 Acknowledgements
