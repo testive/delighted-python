@@ -1,6 +1,3 @@
-.. role:: python(code)
-    :language: python
-
 ================
 Delighted Python
 ================
@@ -13,9 +10,13 @@ Getting started is easy!
 
 Install from pip::
 
+.. code-block:: bash
+
     sudo pip install DelightedPython
 
 Basic Usage::
+
+.. code-block:: python
 
     from delighted import Delighted
 
@@ -32,6 +33,8 @@ See `the docs <https://delightedapp.com/docs/api>`_ for valid parameters and usa
 
 People Resource Examples::
 
+.. code-block:: python
+
     ## Create a new person on delighted
     client.person.create(email='getmynps@testing.com')
 
@@ -47,7 +50,9 @@ Survey Response Resource
 
 See `the docs <https://delightedapp.com/docs/api>`_ for valid parameters and usage.
 
-Survey Response Resource Examples:python:
+Survey Response Resource Examples::
+
+.. code-block:: python
 
     ## Post new response
     client.survey_response.create(person=123, score=10, comment='What a great app!')
@@ -63,6 +68,8 @@ See `the docs <https://delightedapp.com/docs/api>`_ for valid parameters and usa
 
 Metrics Resource Examples::
 
+.. code-block:: python
+
     ## Get NPS Metrics
     client.metrics.get()
 
@@ -76,6 +83,8 @@ Unit Tests
 To run unit test first add your test api key to delighted/test/test_delighted.py.
 
 Then run the following::
+
+.. code-block:: bash
 
     python -m delighted.test.test_delighted
 
