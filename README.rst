@@ -8,13 +8,13 @@ your pythonic NPS on!
 Getting started is easy!
 -----------------------
 
-Install from pip::
+Install from pip:
 
 .. code-block:: bash
 
     sudo pip install DelightedPython
 
-Basic Usage::
+Basic Usage:
 
 .. code-block:: python
 
@@ -31,7 +31,7 @@ Person Resource
 
 See `the docs <https://delightedapp.com/docs/api>`_ for valid parameters and usage.
 
-People Resource Examples::
+People Resource Examples:
 
 .. code-block:: python
 
@@ -50,7 +50,7 @@ Survey Response Resource
 
 See `the docs <https://delightedapp.com/docs/api>`_ for valid parameters and usage.
 
-Survey Response Resource Examples::
+Survey Response Resource Examples:
 
 .. code-block:: python
 
@@ -66,7 +66,7 @@ Metrics Resource
 
 See `the docs <https://delightedapp.com/docs/api>`_ for valid parameters and usage.
 
-Metrics Resource Examples::
+Metrics Resource Examples:
 
 .. code-block:: python
 
@@ -82,7 +82,7 @@ Unit Tests
 
 To run unit test first add your test api key to delighted/test/test_delighted.py.
 
-Then run the following::
+Then run the following:
 
 .. code-block:: bash
 
