@@ -47,13 +47,13 @@ Survey Response Resource
 
 See `the docs <https://delightedapp.com/docs/api>`_ for valid parameters and usage.
 
-Survey Response Resource Examples::
-    :python:`
+Survey Response Resource Examples:python:
+
     ## Post new response
     client.survey_response.create(person=123, score=10, comment='What a great app!')
 
     ## List all responses
-    client.survey_response.get()`
+    client.survey_response.get()
 
 
 Metrics Resource
